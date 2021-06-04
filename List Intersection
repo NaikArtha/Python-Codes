@@ -1,0 +1,35 @@
+#program to find the intersection of two lists 
+list_1 = []
+list_2 = []
+list_3 = []
+print("Enter elements of list one:")
+print("Enter Q when you want to stop entering elements")
+loop_value = 1;
+while True:
+    input1 = input()
+    if input1 == 'Q':
+        break
+    else:
+        try:
+            input1 = int(input1)
+        except Exception as e:
+            print("Please enter a number")
+        else:
+            list_1.append(input1)
+print("Enter elements of list two:")
+print("Enter Q when you want to stop entering elements")
+while True:
+    input2 = input()
+    if input2 == 'Q':
+        break;
+    else:
+        try:
+            input2 = int(input2)
+        except Exception as e:
+            print("Please enter a number")
+        else:
+            list_2.append(input2)
+list_1=set(list_1)
+list_2=set(list_2)
+list_3 = set.intersection(list_1,list_2)
+print("The intersection of these two list is", list_3)
