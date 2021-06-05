@@ -1,0 +1,24 @@
+print("Enter the elements of the list:")
+print("Enter Q to quit list")
+list_1 = []
+numbers = []
+counter = 0
+while True:
+    input1 = input()
+    if input1 == 'Q':
+        break
+    else:
+        try:
+            input1 = int(input1)
+        except Exception as e:
+            print("Please enter a number")
+        else:
+            list_1.append(input1)
+for x in list_1:
+    count_occurance = list_1.count(x)
+    if count_occurance % 2 != 0:
+        counter += 1
+        numbers.append(x)
+        list_1.remove(x)
+print("The number of times a number appears odd number of times is", counter, 'and the number repeated odd number of '
+                                                                              'times are', numbers)
