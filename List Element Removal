@@ -1,0 +1,28 @@
+print("Enter the elements of the list:")
+print("Enter Q to quit list")
+list_1 = []
+counter = 0
+while True:
+    input1 = input()
+    if input1 == 'Q':
+        break
+    else:
+        try:
+            input1 = int(input1)
+        except Exception as e:
+            print("Please enter a number")
+        else:
+            list_1.append(input1)
+while True:
+    removed_element = input("Which element do you want to remove?\n")
+    try:
+        removed_element = int(removed_element)
+    except Exception as e:
+        print("Please enter a number from the list")
+    else:
+        if removed_element in list_1:
+            list_1.remove(removed_element)
+            break
+        else:
+            print("Enter value from the list")
+print("Final list is", list_1)
