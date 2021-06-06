@@ -1,0 +1,25 @@
+#. Given a list of number, return the list with all even numbers doubled, and all odd numbers turned negative
+print("Enter the elements of the list:")
+print("Enter Q to quit list")
+list_1 = []
+list_2 = []
+counter = 0
+while True:
+    input1 = input()
+    if input1 == 'Q':
+        break
+    else:
+        try:
+            input1 = int(input1)
+        except Exception as e:
+            print("Please enter a number")
+        else:
+            list_1.append(input1)
+for a in list_1:
+    if a % 2 == 0:
+        a = a * 2
+        list_2.append(a)
+    else:
+        a = -a
+        list_2.append(a)
+print("Final list is", list_2)
