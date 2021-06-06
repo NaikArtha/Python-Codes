@@ -1,0 +1,27 @@
+import numpy as np
+
+num_of_players = int(input("Enter the number of elements in array: "))
+array = np.empty((num_of_players), int)
+
+print("Entry the values of array")
+for i in range(num_of_players):
+    array[i] = input()
+
+counter = 0
+counter_1 = 0
+counter_2=0
+
+for a in range(num_of_players):
+    if array[a] < 0:
+        counter_2 += 1
+
+final_array = np.empty((counter_2), int)
+
+for a in range(num_of_players):
+    if array[a] < 0:
+        counter += 1
+        final_array[counter_1] = array[a]
+        counter_1 += 1
+
+
+print("The final array of negative numbers is", final_array)
