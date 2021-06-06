@@ -1,0 +1,58 @@
+# Write a program to sort the (name, age, height) tuples by ascending order where
+# name is string, age and height are numbers. The tuples are input by console. The
+# sort criteria is
+# 1: Sort based on name;
+# 2: Then sort based on age;
+# 3: Then sort by score.
+# The priority is that name > age > score.
+# If the following tuples are given as input to the program:
+# Tom,19,80
+# John,20,90
+# Jonny,17,91
+# Jonny,17,93
+# Json,21,85
+# Then, the
+# output of the program should be:
+# [('John', '20', '90'), ('Jonny', '17', '91'), ('Jonny', '17', '93'), ('Json', '21', '85'), ('Tom',
+# '19', '80')]
+
+tuple_1 = []
+tuple_2 = ()
+count = 0
+print("Enter Q to quit list")
+counter = 0
+inner_counter = 0
+while True:
+    serial_number = input("Enter serial number: ")
+    if serial_number == 'Q':
+        break
+    else:
+        name = input("Enter the name: ")
+        while True:
+            age = input("Enter the age: ")
+            try:
+                age = int(age)
+            except:
+                print("Enter a number")
+            else:
+                if age > 112:
+                    print("Enter a valid age")
+                else:
+                    break
+        while True:
+            height = input("Enter the height in cm: ")
+            try:
+                height = int(height)
+            except:
+                print("Enter a number")
+            else:
+                if 63 <= height or height <= 212:
+                    break
+                    count += 1
+                else:
+                    print("Enter a valid height")
+
+    tuple_2 = (name, age, height)
+    tuple_1.append(tuple_2)
+
+print("Sorted lis
