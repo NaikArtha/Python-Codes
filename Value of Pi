@@ -1,0 +1,13 @@
+import random as rd
+
+value = 0
+total = 0
+for x in range(1000000):
+    random_value = rd.random()
+    total += 1
+    if 0<random_value < 0.785:
+        value += 1
+## If value of area of square is unit then area of circle is 0.78
+area = value / total
+pi = area / (0.5 ** 2)
+print("The value of pi is", pi)
