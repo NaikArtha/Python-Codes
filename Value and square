@@ -1,0 +1,32 @@
+# Write a program to create a list of tuples with the first element as the number and the
+# second element as the square of the number.
+# Enter the lower range:1
+# Enter the upper range:4
+# [(1, 1), (2, 4), (3, 9), (4, 16)]
+
+list_1 = []
+tuple_1 = ()
+
+while True:
+    lower_range = input("Enter a lower range: ")
+    try:
+        lower_range = int(lower_range)
+    except Exception as e:
+        print("Please enter a number")
+    else:
+        while True:
+            upper_range = input("Enter a upper range: ")
+            try:
+                upper_range = int(upper_range)
+            except Exception as e:
+                print("Enter a number")
+            else:
+                break
+    break
+
+for a in range(lower_range, upper_range + 1):
+    square = a ** 2
+    tuple_1 = (a, square)
+    list_1.append(tuple_1)
+
+print("The final list is ", list_1)
