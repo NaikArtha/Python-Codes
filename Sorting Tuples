@@ -16,8 +16,8 @@
 # [('John', '20', '90'), ('Jonny', '17', '91'), ('Jonny', '17', '93'), ('Json', '21', '85'), ('Tom',
 # '19', '80')]
 
-tuple_1 = []
-tuple_2 = ()
+list_1 = []
+tuple_1 = ()
 count = 0
 print("Enter Q to quit list")
 counter = 0
@@ -52,7 +52,7 @@ while True:
                 else:
                     print("Enter a valid height")
 
-    tuple_2 = (name, age, height)
-    tuple_1.append(tuple_2)
+    tuple_1 = (name, age, height)
+    list_1.append(tuple_1)
 
-print("Sorted lis
+print("Sorted list is",sorted(list_1))
