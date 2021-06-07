@@ -1,0 +1,46 @@
+# Some functions of Sets
+
+X = set()
+Y = set()
+print("Enter elements of set X: ")
+print("Enter Q to quit.")
+while True:
+    value = input()
+    if value == 'Q':
+        break
+    try:
+        value = int(value)
+    except Exception as e:
+        print("Enter a numeric value please")
+    else:
+        X.add(value)
+
+print("Enter elements of set Y: ")
+print("Enter Q to quit.")
+while True:
+    value = input()
+    if value == 'Q':
+        break
+    try:
+        value = int(value)
+    except Exception as e:
+        print("Enter a numeric value please")
+    else:
+        Y.add(value)
+
+print("\nElements that appear in set X but not in set Y", X - Y)
+print("\nElements that appear in X or Y is ", X.union(Y))
+print("\nElements that appear in X and Y is ", X.intersection(Y))
+print("\nDoes why contain all values of X")
+if Y.issubset(X):
+    print("Yes")
+else:
+    print("No")
+print("\nThe element after will be displayed after popping from X is:", X.pop())
+print("\nDoes 24 appear in X?")
+if 24 in X:
+    print("Yes")
+else:
+    print("No")
+Z = X.union(Y)
+print("\nThe total number of elements in X and Y ", len(Z))
