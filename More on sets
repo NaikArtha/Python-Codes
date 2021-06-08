@@ -1,0 +1,43 @@
+# Create the following three sets
+# A = {squares less than 20}B = {even numbers less than 20}
+# C = {odd squares less than 20 }
+# i. Find the numbers which are both even number and squares less than 20
+# iii. Find the resultant set of adding all the three set elements
+# iv. Without using union operator find the union of set A and B
+# v. Find the total count of elements in all the three sets.
+# vi. Check if number 14 occurs in set B. if so, print “yes” else “no”
+# vii. How an element 16 is removed from set A?
+A = set()
+B = set()
+C = set()
+for i in range(21):
+    square = i**2
+    if square <= 20:
+        A.add(square)
+print("The squares of numbers less than 20 (Set A) is", A)
+for i in range(21):
+    if i % 2 == 0:
+        B.add(i)
+    else:
+        C.add(i)
+print("Even numbers less than 20 (Set B)", B)
+print("Odd numbers less than 20 (Set C)", C)
+print("The numbers which are both even number and squares less than 20", A.intersection(B))
+print("The resultant set of adding all the three set elements", A.union(B.union(C)))
+print("Without using Union operator Union of A and B")
+D = set()
+for i in A:
+    D.add(i)
+for i in B:
+    D.add(i)
+print(D)
+E = A.union(B.union(C))
+print("The total count of elements in all the three sets", len(E))
+print("Does 14 appear in set B?")
+if 14 in B:
+    print("Yes")
+else:
+    print("No")
+print("Removing 16 from Set A")
+A.remove(16)
+print(A)
