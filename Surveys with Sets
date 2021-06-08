@@ -1,0 +1,40 @@
+# A recent survey has been made on the people reading various
+# newspapers. Based on the survey, some group of people reading „The Hindu‟ and/or
+# „Indian Express‟ have been considered. Assume cluster A is reading „The Hindu‟
+# and
+# cluster B is reading „Indian Express‟.
+# Use a suitable sequence data type to compute the following task such as:
+#  People reading both the newspapers
+#  People reading either of newspapers
+#  People reading only „The Hindu‟, but not „Indian Express‟
+#  People reading only „Indian Express‟, but not „The Hindu‟
+# Sample Input:
+# Cluster A: {Aarthi, Lavanya, Rekha, Praveen, Sankar, Sai, Nirmal, Vignesh}
+# Cluster B :{ Lavanya, Praveen, Priyanka, Janani, Nirmal, Karthik, Kishore, Gopi}
+# sample output:
+# (i) People reading both the newspapers are
+#  Lavanya
+#  Praveen
+#  Nirmal
+print("If you read \"The Hindu\" newspaper enter your name below:")
+print("Enter Q to quit entering names")
+cluster_1 = set()
+cluster_2 = set()
+while True:
+    names_1 = input()
+    if names_1 == 'Q':
+        break
+    else:
+        cluster_2.add(names_1)
+print("If you read \"Indian Express\" newspaper enter your name below:")
+print("Enter Q to quit entering names")
+while True:
+    names_2 = input()
+    if names_2 == 'Q':
+        break
+    else:
+        cluster_1.add(names_2)
+print("People reading both newspapers are: ", cluster_1.intersection(cluster_2))
+print("People reading either \"The Hindu\" or \"Indian Express\" are:", cluster_1.union(cluster_2))
+print("People reading only \"The Hindu\" newspaper", cluster_1-cluster_2)
+print("People reading only \"Indian Express\" newspaper", cluster_2-cluster_1)
