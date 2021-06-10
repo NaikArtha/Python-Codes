@@ -1,0 +1,53 @@
+# Write a program to create a list which has both positive and negative numbers.
+# Create another list using filter) that has only positive values.
+def list_1():
+    list1 = []
+    print("Enter the numbers of the list:")
+    print("Press Q to quit entering elements!!")
+    while True:
+        element = input()
+        if element == 'Q':
+            break
+        else:
+            try:
+                element = int(element)
+            except:
+               print("Enter a number please")
+            else:
+                list1.append(element)
+    print("List of positive and negative numbers:", list1)
+
+
+def list_2():
+    list2 = []
+    print("Enter the numbers of the list: (positive numbers only)")
+    print("Press Q to quit entering elements!!")
+    while True:
+        element = input()
+        if element == 'Q':
+            break
+        else:
+            try:
+                element = int(element)
+            except:
+                print("Enter a number please")
+            else:
+                if element >= 0:
+                    list2.append(element)
+                else:
+                    print("Please enter positive values only")
+    print("List of only positive numbers :", list2)
+
+
+print("To Create a list with positive and negative number enter 1 \nand to create a list of only positive numbers "
+      "enter 2:")
+while True:
+    choose = input()
+    if choose == '1':
+        list_1()
+        break
+    elif choose == '2':
+        list_2()
+        break
+    else:
+        print("Invalid Input")
